@@ -1,0 +1,100 @@
+.sidebar {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #222;
+  text-align: center;
+}
+
+.sidebar input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sidebar button {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #a8edea, #d6a4a4);
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .sidebar input {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .sidebar button {
+    flex: none;
+    width: 45%;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    padding: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .sidebar input {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    justify-content: space-evenly;
+  }
+
+  .sidebar button {
+    flex: none;
+    width: 45%;
+  }
+}

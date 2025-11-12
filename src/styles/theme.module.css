@@ -1,0 +1,71 @@
+:root {
+  /* 🌈 Color palette (light pastel theme) */
+  --color-mint: #a8edea;
+  --color-lavender: #d6a4a4;
+  --color-bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  /*--color-bg-gradient: radial-gradient(circle at top left, #a8edea, #d6a4a4, #fdfbfb);*/
+
+
+  /* 🪩 Glassmorphism style variables */
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-blur: blur(10px);
+  --card-border: 1px solid rgba(255, 255, 255, 0.3);
+  --shadow-soft: 0 6px 20px rgba(12, 12, 12, 0.06);
+
+  /* ✨ Font and layout */
+  --font-family: 'Inter', sans-serif;
+  --radius: 12px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+.react-flow__node {
+  background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-soft);
+  border: var(--card-border);
+}
+
+
+/* ========= Global Responsive Tweaks ========= */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .toolbar button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbar button {
+    width: 45%;
+    font-size: 0.85rem;
+  }
+}
+body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
